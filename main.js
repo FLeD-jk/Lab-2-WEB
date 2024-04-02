@@ -48,20 +48,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function createPostHTML(title, text, tagsHTML, timestamp) {
+    // Обрізаємо текст до 100 символів
+    const truncatedText = text.length > 100 ? text.slice(0, 150) + "..." : text;
+
     return `
-          <a class="Card-discuss card border-0" href="./discuss.html" style="text-decoration: none">
-              <div class="card-header border-0">${title}</div>
-              <div class="card-body d-flex justify-content-between">
-                  <div>
-                      <h5 class="card-title">${text}</h5>
-                      <p class="card-text">Created at: ${timestamp}</p>
-                  </div>
-                  <div class="d-flex">
-                    ${tagsHTML}
-                  </div>
+      <a class="Card-discuss card border-0" href="./discuss.html" style="text-decoration: none">
+          <div class="card-header border-0">${title}</div>
+          <div class="card-body d-flex justify-content-between">
+              <div>
+                  <h5 class="card-title">${truncatedText}</h5>
+                  <p class="card-text">Created at: ${timestamp}</p>
               </div>
-          </a>
-        `;
+              <div class="d-flex">
+                ${tagsHTML}
+              </div>
+          </div>
+      </a>
+    `;
   }
 
   function savePostData(postData) {
@@ -142,8 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function filterPosts() {
-    const selectedTag = getSelectedTag();
+  function filterPosts(selectedTag) {
     const posts = document.querySelectorAll(".Tred-container .Card-discuss");
 
     posts.forEach((post) => {
@@ -151,12 +153,12 @@ document.addEventListener("DOMContentLoaded", function () {
       let isVisible = false;
 
       tags.forEach((tag) => {
-        if (tag.textContent === selectedTag) {
+        if (tag.textContent === selectedTag || selectedTag === "") {
           isVisible = true;
         }
       });
 
-      if (selectedTag === "" || isVisible) {
+      if (isVisible) {
         post.style.display = "block";
       } else {
         post.style.display = "none";
@@ -174,4 +176,15 @@ document.addEventListener("DOMContentLoaded", function () {
       return "";
     }
   }
+
+  // Додано функцію для деактивації всіх фільтрів
+  const allCategoriesButton = document.querySelector(".btn-all-categories");
+  allCategoriesButton.addEventListener("click", function () {
+    // Деактивувати всі фільтри
+    const navTagButtons = document.querySelectorAll(".list-group-item-action");
+    navTagButtons.forEach((button) => button.classList.remove("selected"));
+
+    // Викликати функцію для відображення всіх постів
+    filterPosts("");
+  });
 });
