@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профіль користувача</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Навігаційна панель -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a
+          href="./index.html"
+          class="navbar-brand"
+          style="font-size: 24px; color: rgb(253, 183, 53)"
+        >
+          <i
+            class="bi bi-radioactive"
+            style="font-size: 24px; color: rgb(253, 183, 53)"
+          ></i>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a
+          href="./index.html"
+          class="navbar-brand"
+          style="font-size: 24px; color: rgb(253, 183, 53)"
+          >STAL-POINT</a
+        >
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./profile.html">Профіль користувача</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./sign-in.html">Вихід з профілю</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./sign-in.html">Вхід</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./sign-up.html">Реєстрація</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">Про Нас</a>
+            </li>
+          </ul>
+          <form class="d-flex px-2">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Пошук"
+              aria-label="Search"
+              style="background-color: gainsboro"
+            />
+            <button class="btn btn-outline-warning" type="submit">Пошук</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Контент -->
+    <div
+      class="container mt-4"
+      style="
+        background-color: rgb(50, 53, 58);
+        border-radius: 2em;
+        height: 200px;
+      "
+    >
+      <div class="row align-items-center">
+        <div class="col-md-2 text-center">
+          <img
+            src="https://pbs.twimg.com/media/E-RM4RxWYAEm0B8.jpg"
+            class="img-fluid rounded-circle mb-3"
+            alt="Аватар"
+            style="width: 200px; height: 200px"
+          />
+        </div>
+        <div class="col-md-8">
+          <h1 style="color: azure">FLeDik</h1>
+
+          <p style="color: azure">Дата реєстрації: 01 січня 2024</p>
+        </div>
+
+        <div class="col-md-2 text-right">
+          <span class="badge badge-success">
+            <i class="fas fa-user" style="color: green"></i>
+            Онлайн
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="container mt-2">
+        <div class="row justify-content-center gap-4">
+          <!-- Панель піднавігації -->
+          <div
+            class="list-group list-group-flush col-md-2"
+            style="height: 300px"
+          >
+            <a
+              href="#"
+              class="list-group-item list-group-item-action"
+              style="color: white"
+              aria-current="true"
+              >Повідомлення</a
+            >
+            <a
+              href="#"
+              class="list-group-item list-group-item-action"
+              style="color: white"
+              >Дискусії</a
+            >
+            <a
+              href="#"
+              class="list-group-item list-group-item-action"
+              style="color: white"
+              >Налаштування</a
+            >
+          </div>
+          <div class="list-group list-group-flush col">
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+              style="color: white; height: 100px"
+              aria-current="true"
+            >
+              <span style="font-size: 20px"
+                >Баг в селищі новачків: Коли пофіксять бочку в С.Н.? Неможливо
+                робити квести.</span
+              >
+
+              <i class="bi bi-trash"></i>
+            </a>
+
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+              style="color: white; height: 100px"
+              aria-current="true"
+            >
+              <span style="font-size: 20px"
+                >[PENDING] Коли введуть бан чату на 2 тижні?
+              </span>
+              <i class="bi bi-trash"></i>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+              style="color: white; height: 100px"
+              aria-current="true"
+            >
+              <span style="font-size: 20px"
+                >[CLOSED] Компенсація на ребалансі заточки.
+              </span>
+              <i class="bi bi-trash"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

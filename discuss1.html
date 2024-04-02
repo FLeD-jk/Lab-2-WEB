@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моя веб-сторінка</title>
+
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Навігаційна панель -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="./index.html"
+          style="font-size: 24px; color: rgb(253, 183, 53)"
+          ><i
+            class="bi bi-radioactive"
+            style="font-size: 24px; color: rgb(253, 183, 53)"
+          ></i>
+          STAL-POINT</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./profile.html">Профіль користувача</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./sign-in.html">Вихід з профілю</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./sign-in.html">Вхід</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./sign-up.html">Реєстрація</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">Про Нас</a>
+            </li>
+          </ul>
+          <form class="d-flex px-2">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Пошук"
+              aria-label="Search"
+              style="background-color: gainsboro"
+            />
+            <button class="btn btn-outline-warning" type="submit">Пошук</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container mt-5">
+      <h1 class="md-3" style="color: rgb(253, 183, 53)">Компенсація</h1>
+      <h2 class="text-white-50">18 годин тому</h2>
+      <p class="mt-5">
+        <p>Компенсація заточування несправедлива і зламана.</p>
+
+<p>Наведу простий приклад для розуміння.</p>
+
+<p>Припустимо Ви раніше заточили шмотку до, наприклад, +10 і у вас виходить ось така кількість спроб:</p>
+
+<ul>
+  <li>1 lvl - 1 спроба (зараз макс 1 спроба)</li>
+  <li>2 lvl - 1 спроба (зараз макс 2 спроби)</li>
+  <li>3 lvl - 3 спроби (зараз макс 3 спроби)</li>
+  <li>4 lvl - 5 спроб (зараз макс 4 спроби)</li>
+  <li>5 lvl - 4 спроби (зараз макс 5 спроб)</li>
+  <li>6 lvl - 9 спроб (зараз макс 10 спроб)</li>
+  <li>7 lvl - 19 спроб (зараз макс 15 спроб)</li>
+  <li>8 lvl - 18 спроб (зараз макс 20 спроб)</li>
+  <li>9 lvl - 11 спроб (зараз макс 25 спроб)</li>
+  <li>10 lvl - 36 спроб (зараз макс 30 спроб)</li>
+</ul>
+
+<p><strong>ЯК МАЄ ПРАЦЮВАТИ</strong></p>
+
+<p>Алгоритм має проходитися по кожному рівню окремо, перевіряючи, чи не перевищує ваша кількість траїв кількість максимальних траїв. Тобто в цьому випадку алгоритм повернув би вам 1 запаску за 4 рівень, 4 запаски за 7 рівень і 6 запасок за 10 рівень.</p>
+
+<p><strong>ЯК ПРАЦЮЄ ЗАРАЗ</strong></p>
+
+<p>Алгоритм перемішує всі ваші траї і вирівнює загальну кількість, тобто в цьому випадку, де вам, як годиться, належало б 11 запасок, алгоритм би сказав вам, що ви зробили 107 спроб за максимального обмеження в 115 спроб і вам загалом нічого не належить.</p>
+
+<p>Це математично неправильно, оскільки в разі перемішування всіх рівнів, ви закриваєте одне невезіння іншим везінням, хоча весь сенс гарантів - це уникнути сильного невезіння в конкретному взятому кейсі. На додачу до цього всього варто додати, що якщо ви точили рік+ тому, то отримати компенсацію для вас околонереально.</p>
+
+<p>Як приклад можу навести себе, який вкинув у ССР величезну кількість запасок (близько 200) з 13 до 15 (до 13 я його заточив ще до перебудови).</p>
+
+<p>Гра весело відрапортувала, що компенсація мені не передбачена, оскільки я зробив лише сотню з чимось спроб, за необхідних 370, хоча я де-факто точив два рівні.</p>
+
+<p>Я вимагаю переробки компенсації за заточку, вона видана несправедливо і не повертає гравцям ту кількість ресурсів, яку вони повинні отримати через зміни в механіці.</p>
+
+      </p>
+    </div>
+
+  <!-- Секція коментарів -->
+  <div class=" container mt-5 ">
+    <h2 style="color: rgb(253, 183, 53)">Коментарі</h2>
+    <div class="media mt-3">
+      <img src="https://cdn.discordapp.com/attachments/426033551658450944/1215720389875863592/g4S5XMb5eJFqR3MD.png?ex=65fdc6d7&is=65eb51d7&hm=efcf545d880eebc2183ef646694a68b16bb9d95d03f166b75277622aad7f6e70&" class="mr-3" alt="Аватар" />
+      <div class="media-body">
+        <h5 class="mt-0">Flex>Monker</h5>
+        Зараз би скиглити, що пушки не точяться.
+        <div class="media mt-3">
+          <img
+            src="https://cdn.discordapp.com/attachments/426033551658450944/1215720468255080598/4LM6AgDpRVBGDr4a.png?ex=65fdc6ea&is=65eb51ea&hm=df094604d94e6353db048e21e74f6d74781e80cf5b068c1543092c76de6ea694&"
+            class="mr-3"
+            alt="Аватар"
+          />
+          <div class="media-body">
+            <h5 class="mt-0">gli_pro</h5>
+            Зараз би точиться по гаранту...
+            <div class="media mt-3">
+              <img
+                src="https://cdn.discordapp.com/attachments/426033551658450944/1215720574257729556/2eeEDjPdFY8DjMU8.png?ex=65fdc703&is=65eb5203&hm=2c2f9c666d5857107ef68081f38f1c6fa347f8ba575f92b2c6e2ff8000bf1ff5&"
+                class="mr-3"
+                alt="Аватар"
+              />
+              <div class="media-body">
+                <h5 class="mt-0">Hamster_young_boy</h5>
+                Зараз би на форумі скиглити.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="media mt-3">
+          <img
+            src="https://cdn.discordapp.com/attachments/426033551658450944/1215720614602477598/yI8A6EAeEe1rAyuY.png?ex=65fdc70d&is=65eb520d&hm=d33d443b40d39eb3a64d4d3b807495d64c2efe2df19a7c51521fd8e467635b2e&"
+            class="mr-3"
+            alt="Аватар"
+          />
+          <div class="media-body">
+            <h5 class="mt-0">Traider</h5>
+            ....
+          </div>
+        </div>
+      </div>
+      
+    
+    </div>
+
+    <div class="media mt-3">
+      <img
+        src="https://cdn.discordapp.com/attachments/426033551658450944/1215720500450299904/N3Q9iQRk9JQGc9pU.png?ex=65fdc6f2&is=65eb51f2&hm=77ffd84d03105b6677981c169063cfd08b64ddea696af6547194faee8baeed6d&"
+        class="mr-3"
+        alt="Аватар"
+      />
+      <div class="media-body">
+        <h5 class="mt-0">Lvivianin</h5>
+        Я Микола Парасюк, зі Львова, я витратив 1к запасок на 3 лвл на +13.
+      </div>
+    </div>
+  </div>
+</div>
+
+<form class="container mt-5">
+  <div class="form-group">
+      <label for="comment" style="color: rgb(253, 183, 53);">Ваш коментар:</label>
+      <textarea class="form-control" id="comment" rows="3" style="border-radius: 1em; background-color:azure"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" style="border-radius: 1em; border-color: rgb(253, 183, 53); background-color: rgb(253, 183, 53); width: 120px; height: 60px; padding: 5px 10px; color: rgb(42, 46, 51);">
+      Додати коментар
+  </button>
+</form>
+
+   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

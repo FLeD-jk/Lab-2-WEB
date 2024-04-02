@@ -1,0 +1,122 @@
+body {
+  background: rgb(42, 46, 51);
+  /* color: var(--text-color); */
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Cantarell, Oxygen, Roboto, Helvetica, Arial, sans-serif; */
+  /*font-size: 13px;*/
+  line-height: 1.5;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: azure;
+  font-family: "Chakra Petch", sans-serif;
+  word-spacing: 5px;
+}
+
+@media (max-width: 450px) {
+  .media {
+    display: block;
+  }
+}
+
+.list-group-item {
+  background-color: rgb(42, 46, 51);
+}
+
+.list-group-item.selected {
+  filter: brightness(80%);
+}
+
+.btn-all-categories {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Card-discuss {
+  border-radius: 2em;
+  height: 150px;
+  background-color: rgb(42, 46, 51);
+  color: #ddd;
+}
+
+.Card-discuss:hover {
+  background-color: rgb(50, 53, 58);
+}
+
+.btn-discuss {
+  border: none;
+  font-family: "Coiny", sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 5px 3px;
+  width: 100px;
+  height: 40px;
+  /* background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);*/
+  background-color: rgb(253, 183, 53);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.list-group-item:hover {
+  background-color: rgb(255, 166, 0);
+  transform: scale(110%) rotate(-0.1deg);
+  cursor: pointer;
+}
+
+.card-header {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 20px;
+  font-family: "Chakra Petch", sans-serif;
+  height: 50px;
+}
+
+.card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 16px;
+  font-family: "Chakra Petch", sans-serif;
+  height: 50px;
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.tag {
+  background-color: #3b82f6;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.tag.selected {
+  filter: brightness(80%);
+}
+
+.btn-add-post {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(42, 46, 51);
+  border-radius: 5px;
+  border: none;
+}
+
+.btn-add-post:hover {
+  background-color: rgb(255, 166, 0);
+  transform: scale(110%) rotate(-0.1deg);
+  cursor: pointer;
+}
