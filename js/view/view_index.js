@@ -1,6 +1,6 @@
 // view.js
-import PostModel from "./model.js";
-import PostController from "./controller.js";
+import PostModel from "../model/model_index.js";
+import PostController from "../controller/controller_index.js";
 
 export default class PostView {
   constructor() {
