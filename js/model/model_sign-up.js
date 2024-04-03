@@ -1,4 +1,3 @@
-// form_model.js
 export default class FormModel {
   validateUserData(userData) {
     const { name, password, email, dob } = userData;

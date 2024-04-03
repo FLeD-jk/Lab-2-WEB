@@ -1,6 +1,6 @@
-import FormModel from "./model_sign-up.js";
-import FormView from "./view_sign-up.js";
-import FormController from "./controller_sign-up.js";
+import FormModel from "./js/model/model_sign-up.js";
+import FormView from "./js/view/view_sign-up.js";
+import FormController from "./js/controller/controller_sign-up.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   const formModel = new FormModel();

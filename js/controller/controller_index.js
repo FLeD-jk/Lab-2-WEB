@@ -17,6 +17,7 @@ export default class PostController {
     this.loadPosts();
     this.registerTagButtons();
     this.registerSubnavigationButtons();
+    this.registerSearch();
 
     const allCategoriesButton = document.querySelector(".btn-all-categories");
     allCategoriesButton.addEventListener("click", () => {
@@ -86,6 +87,28 @@ export default class PostController {
       button.addEventListener("click", () => {
         this.handleSubnavigationClick(button);
       });
+    });
+  }
+
+  registerSearch() {
+    const searchForm = document.querySelector("form.d-flex");
+    searchForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const searchTerm = event.target.querySelector("input[type=search]").value;
+      this.searchPostsByTitle(searchTerm);
+    });
+  }
+
+  searchPostsByTitle(searchTerm) {
+    const posts = document.querySelectorAll(".Tred-container .Card-discuss");
+
+    posts.forEach((post) => {
+      const title = post.querySelector(".card-title").textContent.toLowerCase();
+      if (title.includes(searchTerm.toLowerCase())) {
+        post.style.display = "block";
+      } else {
+        post.style.display = "none";
+      }
     });
   }
 

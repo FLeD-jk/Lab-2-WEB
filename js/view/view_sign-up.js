@@ -1,4 +1,3 @@
-// form_view.js
 export default class FormView {
   getUserData() {
     return {

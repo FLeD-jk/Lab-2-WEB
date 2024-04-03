@@ -1,5 +1,5 @@
-import Model from "../model/model_about.js";
-import View from "../view/view_about.js";
+import Model from "../model/model_navbar.js";
+import View from "../view/view_navbar.js";
 
 export default class Controller {
   constructor() {

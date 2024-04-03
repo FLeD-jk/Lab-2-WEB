@@ -1,4 +1,3 @@
-// view_about.js
 export default class View {
   setProfileAndExit() {
     let navElem = document.getElementById("in-up");

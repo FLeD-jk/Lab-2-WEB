@@ -1,4 +1,3 @@
-// model_about.js
 export default class Model {
   isActive() {
     let raw = localStorage.getItem("currentAccount");
