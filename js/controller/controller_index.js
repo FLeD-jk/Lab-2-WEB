@@ -29,7 +29,19 @@ export default class PostController {
     });
   }
 
+  isLoggedIn() {
+    const currentAccount = localStorage.getItem("currentAccount");
+    return currentAccount !== null && currentAccount !== "";
+  }
+
   addPost() {
+    // Check if user is logged in before allowing to add a post
+    if (!this.isLoggedIn()) {
+      alert("Будь ласка, увійдіть, щоб створити пост.");
+      window.location.href = "./sign-in.html";
+      return;
+    }
+
     const title = document.querySelector("#add_title_post").value;
     const text = document.querySelector("#todo-text-input").value;
 
@@ -39,6 +51,12 @@ export default class PostController {
     }
 
     const selectedTags = this.updateSelectedTags();
+
+    if (selectedTags.length === 0) {
+      alert("Виберіть хоча б один тег!");
+      return;
+    }
+
     const tagsHTML = this.generateTagsHTML(selectedTags);
     const timestamp = new Date().toLocaleString();
 
