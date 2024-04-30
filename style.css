@@ -148,3 +148,7 @@ body {
   font-family: "Chakra Petch", sans-serif;
   width: 100%;
 }
+
+a.text-muted {
+  text-decoration: none;
+}
